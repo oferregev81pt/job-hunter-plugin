@@ -1,0 +1,11 @@
+{
+  "name": "job-hunter-plugin",
+  "owner": { "name": "Ofer Regev" },
+  "plugins": [
+    {
+      "name": "job-hunter",
+      "source": "./plugins/job-hunter",
+      "description": "AI-powered job application skills: research, fit analysis, CV tailoring, cover letters, and interview prep — all in Claude."
+    }
+  ]
+}
