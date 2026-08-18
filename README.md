@@ -4,11 +4,16 @@ A plugin marketplace for Claude. Install skills that help job seekers research c
 
 ## Install the Job Hunter plugin
 
-1. Download [`job-hunter.plugin`](./job-hunter.plugin)
-2. Open Claude Cowork → Settings → Plugins → Install from file
-3. Select the downloaded file
+In [Claude Code](https://claude.com/claude-code), run:
 
-That's it. The 7 skills are now available in your Claude chat.
+```
+/plugin marketplace add oferregev81pt/job-hunter-plugin
+/plugin install job-hunter@job-hunter-plugin
+```
+
+Then restart Claude Code (or run `/plugin` and confirm) when prompted. That's it — the 7 skills are now available in your Claude Code chat.
+
+To update later, run `/plugin marketplace update job-hunter-plugin` followed by `/plugin update job-hunter`. To remove it, run `/plugin uninstall job-hunter@job-hunter-plugin`.
 
 ## Skills in the job-hunter plugin
 
@@ -43,10 +48,7 @@ To add a new plugin:
    │       └── SKILL.md
    └── README.md
    ```
-3. Build the `.plugin` file:
-   ```bash
-   cd plugins/<plugin-name> && zip -r /tmp/<plugin-name>.plugin . -x "*.DS_Store" && cp /tmp/<plugin-name>.plugin ../../<plugin-name>.plugin
-   ```
+3. Add an entry for it in [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
 4. Open a PR
 
 See `plugins/job-hunter/` for a complete example.
