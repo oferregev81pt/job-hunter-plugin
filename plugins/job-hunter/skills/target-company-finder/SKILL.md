@@ -19,7 +19,7 @@ Interview the user about what they're looking for, research a ranked company lis
    5. "How many companies should I find? (default 20 if no preference)"
    6. "Any companies I should exclude — already applied, not interested?" (optional, can skip)
 
-3. Run web searches to build a candidate list matching the stated criteria. For each candidate company capture: name, category/domain, stage, location, careers page URL if found, and a one-line "why it fits" tied to the user's stated criteria. Exclude anything the user asked to exclude.
+3. Run web searches to build a candidate list matching the stated criteria. For each candidate company capture: name, category/domain, stage, location, careers page URL if found, target level (the user's stated answer, applied to all candidates since it's a search criterion, not something that varies per company), and a one-line "why it fits" tied to the user's stated criteria. Exclude anything the user asked to exclude.
 
 4. Group the candidates into three tiers based on fit against the stated criteria:
    - **Dream** — matches all criteria closely, most desirable
@@ -30,8 +30,8 @@ Interview the user about what they're looking for, research a ranked company lis
 
 5. On approval, write to the Target Companies database:
    - For each candidate, query existing rows by company name (case-insensitive match).
-   - **Match found:** update `Tier`, `Stage`, `Location`, `Why It Fits`. For `Notes`, append the new note rather than overwrite existing content. Never touch `Warm Contact` or `Status` — those are user-maintained.
-   - **No match:** create a new row with `Status` = "Not Started" and all captured fields filled in.
+   - **Match found:** update `Tier`, `Category`, `Stage`, `Location`, `Careers URL`, `Target Level`, `Why It Fits`. For `Notes`, append the new note rather than overwrite existing content. Never touch `Warm Contact` or `Status` — those are user-maintained.
+   - **No match:** create a new row with `Status` = "Not Started" and all captured fields filled in, including `Target Level`.
 
 6. Report a summary: "Added N, updated N." with the database link.
 
