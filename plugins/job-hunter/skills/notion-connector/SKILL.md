@@ -12,11 +12,12 @@ Create (or reuse) a job-search tracker structure, in whichever storage the user 
 1. Ask the user: "Where should I set up your job-search tracker — in Notion, or as local files on this machine (no external account or connection needed)?" Wait for response. If the user has already stated a preference earlier in the conversation, use it without asking again.
 
 2. **If the user chose local files:**
-   1. Ask: "Where should I put these files? (default: `./job-search-tracker/` in the current directory)" Wait for response, or use the default if they have no preference.
-   2. For each of the three trackers below, check whether a matching CSV file already exists in that folder (`applications-tracker.csv`, `target-companies.csv`, `networking-contacts.csv`).
+   1. Search broadly for an existing tracker first — e.g. `find . -maxdepth 4 -iname "target-companies.csv" -o -maxdepth 4 -iname "applications-tracker.csv" -o -maxdepth 4 -iname "networking-contacts.csv"` — so a previously chosen custom folder is found instead of assuming none exists. If found, use that folder and skip to step 2.3.
+   2. Otherwise ask: "Where should I put these files? (default: `./job-search-tracker/` in the current directory)" Wait for response, or use the default if they have no preference.
+   3. For each of the three trackers below, check whether its matching CSV file already exists in that folder — filenames map to trackers as: `applications-tracker.csv` ↔ Applications Tracker, `target-companies.csv` ↔ Target Companies, `networking-contacts.csv` ↔ Networking Contacts.
       - If found: reuse it as-is. Do not rewrite or reorder its header row or existing rows. Note it as "reused."
-      - If not found: create it with a header row containing exactly the field names listed for that tracker (comma-separated, no data rows). Note it as "created."
-   3. Report back the folder path and which files were created vs. reused. Skip straight to the end — do not run the Notion steps below.
+      - If not found: create it with a header row containing exactly the backtick-quoted field name from each bullet below (strip the type/options annotation after the `—`), in the same order as listed, no data rows. Write it as proper CSV: fields containing a comma, quote, or newline must be wrapped in double quotes with embedded double quotes doubled (RFC 4180) — use a real CSV writer (e.g. Python's `csv` module via the Bash tool) rather than joining strings with commas, since free-text fields like "Why It Fits" will routinely contain commas. Note it as "created."
+   4. Report back the folder path and which files were created vs. reused. Skip straight to the end — do not run the Notion steps below.
 
 3. **If the user chose Notion:** confirm access first. Look for available tools whose names contain `notion-search`, `notion-create-database`, or `notion-fetch`. If none are available, tell the user: "I don't see a Notion connection available. Connect Notion first (via your connector settings, or `/mcp` in an interactive session), or I can set this up as local files instead — want me to do that?" If they switch to local, go to step 2. Otherwise stop.
 
@@ -70,5 +71,6 @@ Create (or reuse) a job-search tracker structure, in whichever storage the user 
 - Notion is always optional. Never set up Notion without asking first, and never treat local files as a fallback of last resort — it's an equally valid first choice.
 - Never hardcode a page ID, database ID, folder path, or URL — always search, ask, or use the stated default.
 - Never modify the schema of a database (or the header row of a local CSV) you reused.
+- Always write local CSVs with proper quoting/escaping (RFC 4180) via a real CSV library, never by joining fields with commas manually — a "Why It Fits" sentence containing a comma will silently corrupt a naively-written row.
 - If creation fails partway (e.g. 2 of 3 databases or files created), report exactly which succeeded and which failed. Do not retry silently or guess at what went wrong.
 - If asked to set this up again later, re-run the same search-then-create-if-missing logic for whichever storage was chosen — never create duplicates of a database or file that already exists.

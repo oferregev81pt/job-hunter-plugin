@@ -10,7 +10,7 @@ Interview the user about what they're looking for, research a ranked company lis
 ## Instructions
 
 1. Determine where the user's tracker lives:
-   - If a local `target-companies.csv` file already exists (check `./job-search-tracker/` and ask if unsure), use local files.
+   - Search broadly for an existing local tracker first — e.g. `find . -maxdepth 4 -iname "target-companies.csv"` — rather than only checking the default `./job-search-tracker/` folder, since the user may have chosen a different location when it was set up. If found, use local files at that path.
    - Else if a Notion database titled "Target Companies" exists, use Notion.
    - Else tell the user: "You don't have a target company tracker yet — let me set one up first," then invoke the `notion-connector` skill (which will itself ask whether to use Notion or local files). Continue once it's created, using whichever storage the user chose.
 
@@ -35,7 +35,7 @@ Interview the user about what they're looking for, research a ranked company lis
    - For each candidate, look up an existing row by company name (case-insensitive match) — query Notion by property value, or read the local CSV and match on the `Company` column.
    - **Match found:** update `Tier`, `Category`, `Stage`, `Location`, `Careers URL`, `Target Level`, `Why It Fits`. For `Notes`, append the new note rather than overwrite existing content. Never touch `Warm Contact` or `Status` — those are user-maintained.
    - **No match:** add a new row (a new Notion page, or a new CSV line) with `Status` = "Not Started" and all captured fields filled in, including `Target Level`.
-   - For local files, read the whole CSV, apply the match/update/append logic in memory, and write the full file back once — never append blindly without checking for an existing row first.
+   - For local files, read the whole CSV with a real CSV parser, apply the match/update/append logic in memory, and write the full file back once with a real CSV writer (RFC 4180 quoting/escaping) — never append blindly without checking for an existing row first, and never build rows by joining fields with commas manually, since "Why It Fits" is free text that will often contain one.
 
 6. Report a summary: "Added N, updated N." with the database link, or the local file path.
 
