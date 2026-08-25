@@ -16,7 +16,9 @@ Create (or reuse) a job-search tracker structure in the user's own Notion worksp
    - If there's a clear single match, tell the user what you found and ask them to confirm using it, or provide a different page.
    - If there's no clear match, ask: "Should I create a new page called 'Job Search Tracker' to hold these databases, or do you want to point me at an existing page?" Wait for response.
 
-3. For each of the three databases below, search under the chosen parent page for an existing database with a matching title (case-insensitive).
+3. If the user chose to create a new page, use an available `notion-create-pages`-style tool to create a page titled "Job Search Tracker" at the workspace top level (or under a location the user specifies). Use the resulting page as the parent for step 4. If the user instead pointed you at an existing page, use that page as the parent.
+
+4. For each of the three databases below, search under the chosen parent page for an existing database with a matching title (case-insensitive).
    - If found: reuse it. Do not modify its schema. Note it as "reused."
    - If not found: create it with the exact schema given. Note it as "created."
 
@@ -53,7 +55,7 @@ Create (or reuse) a job-search tracker structure in the user's own Notion worksp
    - `Last Contact` — date
    - `Notes` — text
 
-4. Report back to the user: for each of the 3 databases, whether it was created or reused, and its link.
+5. Report back to the user: for each of the 3 databases, whether it was created or reused, and its link.
 
 ## Rules
 - Never hardcode a page ID, database ID, or URL — always search or ask.
