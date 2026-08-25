@@ -11,7 +11,10 @@ Give an honest, evidence-based fit assessment — not a pep talk.
 
 Ask for inputs one at a time:
 
-1. "Please paste your CV below." (Wait for response.)
+1. Check whether `./job-search-tracker/cv.md` exists and is non-empty.
+   - If found: say "Found your saved CV — using it." and use its contents. Do not ask the user to paste anything — skip to the next input.
+   - If not found: ask "Please paste your CV below." (Wait for response.) Once given, save it verbatim to `./job-search-tracker/cv.md` (creating the `job-search-tracker/` folder first if it doesn't exist).
+   - If the user pastes a new CV unprompted later even though a saved one was used, overwrite `cv.md` with the new content immediately — no confirmation needed.
 
 2. "Now paste the job description — or share the URL and I'll fetch it." (Wait for response.)
 
