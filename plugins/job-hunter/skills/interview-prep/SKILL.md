@@ -15,7 +15,10 @@ Ask inputs one at a time:
    Options: "Applying now — I need an application package" / "HR / recruiter screen" / "Professional / hiring manager interview" / "Home assignment"
    (Wait for response.)
 
-2. "Please paste your CV below." (Wait for response.)
+2. Check whether `./job-search-tracker/cv.md` exists and is non-empty.
+   - If found: say "Found your saved CV — using it." and use its contents. Do not ask the user to paste anything — skip to the next input.
+   - If not found: ask "Please paste your CV below." (Wait for response.) Once given, save it verbatim to `./job-search-tracker/cv.md` (creating the `job-search-tracker/` folder first if it doesn't exist).
+   - If the user pastes a new CV unprompted later even though a saved one was used, overwrite `cv.md` with the new content immediately — no confirmation needed.
 
 3. "Paste the job description." (Wait for response.)
 
