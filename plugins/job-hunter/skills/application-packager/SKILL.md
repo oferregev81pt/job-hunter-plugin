@@ -13,7 +13,10 @@ Guide the user through a complete application package in one conversation. Colle
 
 Ask one at a time:
 
-1. "Please paste your CV below." (Wait.)
+1. Check whether `./job-search-tracker/cv.md` exists and is non-empty.
+   - If found: say "Found your saved CV — using it." and use its contents. Do not ask the user to paste anything — skip to the next input.
+   - If not found: ask "Please paste your CV below." (Wait.) Once given, save it verbatim to `./job-search-tracker/cv.md` (creating the `job-search-tracker/` folder first if it doesn't exist).
+   - If the user pastes a new CV unprompted later even though a saved one was used, overwrite `cv.md` with the new content immediately — no confirmation needed.
 2. "Now paste the job description — or share the URL and I'll fetch it." (Wait.)
 3. "Which experience from your background do you most want to highlight for this role?" (Wait.)
 4. "Any gap or weakness you're concerned about?" (Wait.)
@@ -104,3 +107,4 @@ Output as one consolidated document:
 - The cover letter opener must be specific to this company, never generic
 - If web search yields nothing, note it and proceed from CV + JD alone
 - Keep the full output as one document so the user can copy it all at once
+- Never overwrite `./job-search-tracker/cv.md` with the tailored CV generated in Step 4 — only the original source CV loaded or pasted in Step 1 belongs there
