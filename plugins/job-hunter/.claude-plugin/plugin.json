@@ -1,6 +1,6 @@
 {
   "name": "job-hunter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "AI-powered job application skills: research, fit analysis, CV tailoring, cover letters, and interview prep — all in Claude.",
   "author": {
     "name": "Ofer Regev"
