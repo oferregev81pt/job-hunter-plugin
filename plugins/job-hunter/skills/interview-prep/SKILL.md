@@ -62,8 +62,10 @@ Ask inputs one at a time:
 ## Your headline for this role
 [1-sentence framing of who this candidate is relative to this specific role]
 
+## Tell me about yourself
+[Full first-person spoken answer, 60–90 seconds, ready to read near-verbatim. Follow a Present → Past → Future shape: Present — current role/title and the specific slice of it most relevant to this role; Past — 1–2 career beats from the actual CV that build the throughline to this role; Future — why this specific role/company is the logical next step, tied to the JD. Pull specific facts (titles, companies, concrete achievements) from the CV — never generic filler like "I'm a passionate professional." End on a concrete bridge to the JD's core requirement, not a vague "I'm excited about this opportunity."]
+
 ## Expected HR questions and your angles
-- "Tell me about yourself" — [which thread from their CV to lead with for this role]
 - "Why [Company]?" — [specific, research-backed answer]
 - "Why are you leaving your current role?" — [brief, positive-framed]
 - "What do you know about us?" — [3 specific things from research or JD]
@@ -90,6 +92,9 @@ Ask inputs one at a time:
 ## Stories to bring (STAR format)
 [6–8 bullets, each tied to a specific JD requirement]
 - **[Short story title]** — [1–2 sentences: situation + result]. Maps to JD: [requirement]
+
+## Tell me about yourself
+[Full first-person spoken answer, 60–90 seconds, ready to read near-verbatim. Follow a Present → Past → Future shape: Present — current role/title and the specific slice of it most relevant to this role; Past — 1–2 career beats from the actual CV that build the throughline to this role; Future — why this specific role/company is the logical next step, tied to the JD. Pull specific facts (titles, companies, concrete achievements) from the CV — never generic filler like "I'm a passionate professional." End on a concrete bridge to the JD's core requirement, not a vague "I'm excited about this opportunity."]
 
 ## Likely questions and angles
 - "Walk me through your experience with [key JD skill]" — [which CV thread to lead with]
