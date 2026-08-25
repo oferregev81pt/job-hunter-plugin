@@ -11,7 +11,7 @@ In [Claude Code](https://claude.com/claude-code), run:
 /plugin install job-hunter@job-hunter-plugin
 ```
 
-Then restart Claude Code (or run `/plugin` and confirm) when prompted. That's it — the 7 skills are now available in your Claude Code chat.
+Then restart Claude Code (or run `/plugin` and confirm) when prompted. That's it — the 9 skills are now available in your Claude Code chat.
 
 To update later, run `/plugin marketplace update job-hunter-plugin` followed by `/plugin update job-hunter`. To remove it, run `/plugin uninstall job-hunter@job-hunter-plugin`.
 
@@ -26,6 +26,12 @@ To update later, run `/plugin marketplace update job-hunter-plugin` followed by 
 | **Interview Prep** | Stage-specific prep: applying now / HR screen / professional interview / home assignment | "Help me prep for my interview" |
 | **CV Builder** | Conversational interview → full ATS-optimized CV from scratch | "Help me build my CV from scratch" |
 | **Application Packager** | Everything in one session: research + fit + tailored CV + cover letter + prep doc | "Build my full application package" |
+| **Notion Connector** | Sets up a job-search tracker (applications, target companies, networking contacts) — in Notion or as local files, your choice | "Set up my job tracker" |
+| **Target Company Finder** | Researches and maintains a ranked target-company list in your tracker | "Find me 20 target companies" |
+
+## Tracker storage: Notion or local
+
+`Notion Connector` and `Target Company Finder` ask up front whether to track things in Notion or as local CSV files on your machine — Notion is entirely optional, and local files work with no setup at all.
 
 ## Roadmap
 
