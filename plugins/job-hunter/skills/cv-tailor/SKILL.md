@@ -11,7 +11,10 @@ Rewrite the candidate's CV for a specific role — surface what's relevant, drop
 
 Ask for inputs one at a time:
 
-1. "Please paste your CV below." (Wait for response.)
+1. Check whether `./job-search-tracker/cv.md` exists and is non-empty.
+   - If found: say "Found your saved CV — using it." and use its contents. Do not ask the user to paste anything — skip to the next input.
+   - If not found: ask "Please paste your CV below." (Wait for response.) Once given, save it verbatim to `./job-search-tracker/cv.md` (creating the `job-search-tracker/` folder first if it doesn't exist).
+   - If the user pastes a new CV unprompted later even though a saved one was used, overwrite `cv.md` with the new content immediately — no confirmation needed.
 
 2. "Now paste the job description." (Wait for response.)
 
@@ -33,6 +36,7 @@ Ask for inputs one at a time:
 - Change job titles, dates, or company names
 - Add quantitative claims not in the original
 - Inflate scope beyond what the CV states
+- Overwrite `./job-search-tracker/cv.md` with this tailored output — only the original source CV loaded or pasted in Step 1 belongs there
 
 6. Return the full tailored CV as clean markdown:
 
