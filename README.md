@@ -58,3 +58,7 @@ To add a new plugin:
 4. Open a PR
 
 See `plugins/job-hunter/` for a complete example.
+
+---
+
+Part of [The AI PM Hub](https://theaipmhub.com) — AI skills for product managers, by Ofer Regev.
