@@ -8,14 +8,14 @@ In [Claude Code](https://claude.com/claude-code), run:
 
 ```
 /plugin marketplace add oferregev81pt/job-hunter-plugin
-/plugin install jobhunter-ai@job-hunter-plugin
+/plugin install careerpilot-ai@job-hunter-plugin
 ```
 
 Then restart Claude Code (or run `/plugin` and confirm) when prompted. That's it — the 9 skills are now available in your Claude Code chat.
 
-To update later, run `/plugin marketplace update job-hunter-plugin` followed by `/plugin update jobhunter-ai`. To remove it, run `/plugin uninstall jobhunter-ai@job-hunter-plugin`.
+To update later, run `/plugin marketplace update job-hunter-plugin` followed by `/plugin update careerpilot-ai`. To remove it, run `/plugin uninstall careerpilot-ai@job-hunter-plugin`.
 
-## Skills in the jobhunter-ai plugin
+## Skills in the careerpilot-ai plugin
 
 | Skill | What it does | Try saying |
 |---|---|---|
@@ -57,7 +57,7 @@ To add a new plugin:
 3. Add an entry for it in [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
 4. Open a PR
 
-See `plugins/jobhunter-ai/` for a complete example.
+See `plugins/careerpilot-ai/` for a complete example.
 
 ---
 

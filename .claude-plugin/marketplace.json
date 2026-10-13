@@ -3,8 +3,8 @@
   "owner": { "name": "Ofer Regev" },
   "plugins": [
     {
-      "name": "jobhunter-ai",
-      "source": "./plugins/jobhunter-ai",
+      "name": "careerpilot-ai",
+      "source": "./plugins/careerpilot-ai",
       "description": "AI-powered job application skills: research, fit analysis, CV tailoring, cover letters, and interview prep — all in Claude."
     }
   ]
