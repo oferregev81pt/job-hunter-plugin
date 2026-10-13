@@ -84,4 +84,4 @@ Compose a full ATS-optimized CV following these strict rules:
 **[Category]:** skill1, skill2
 ```
 
-After presenting the composed CV to the user, also save it verbatim to `./job-search-tracker/cv.md` (creating the `job-search-tracker/` folder first if it doesn't exist), overwriting any previously saved CV. This makes it the shared source CV for the other job-hunter skills, so the user won't be asked to paste it again.
+After presenting the composed CV to the user, also save it verbatim to `./job-search-tracker/cv.md` (creating the `job-search-tracker/` folder first if it doesn't exist), overwriting any previously saved CV. This makes it the shared source CV for the other jobhunter-ai skills, so the user won't be asked to paste it again.
