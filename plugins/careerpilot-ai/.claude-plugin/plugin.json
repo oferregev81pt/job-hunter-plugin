@@ -1,6 +1,6 @@
 {
   "name": "careerpilot-ai",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "AI-powered job application skills: research, fit analysis, CV tailoring, cover letters, and interview prep — all in Claude.",
   "author": {
     "name": "Ofer Regev"
@@ -15,5 +15,7 @@
   ],
   "license": "MIT",
   "icon": "./.claude-plugin/icon.png",
-  "privacyPolicyUrl": "https://github.com/oferregev81pt/job-hunter-plugin/blob/main/PRIVACY.md"
+  "privacyPolicyUrl": "https://github.com/oferregev81pt/job-hunter-plugin/blob/main/PRIVACY.md",
+  "homepage": "https://github.com/oferregev81pt/job-hunter-plugin",
+  "repository": "https://github.com/oferregev81pt/job-hunter-plugin"
 }

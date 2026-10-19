@@ -63,6 +63,18 @@ See `plugins/careerpilot-ai/` for a complete example.
 
 Part of [The AI PM Hub](https://theaipmhub.com) — AI skills for product managers, by Ofer Regev.
 
+## What this plugin runs and connects to
+
+careerpilot-ai is **instructions only** (Markdown `SKILL.md` files). It ships no scripts, binaries, hooks, background processes, servers or MCP server definitions, and it makes no network requests of its own. Everything below is done by Claude, with your Claude product's normal permission prompts:
+
+| Capability | Used by | Details |
+|---|---|---|
+| Web search | company-researcher, cover-letter-writer, application-packager, target-company-finder | Claude's built-in web search, for public company information only. |
+| Local files | all skills that reuse your CV; notion-connector; target-company-finder | Reads and writes plain files in `./job-search-tracker/` (e.g. `cv.md`, `*.csv`) in your current directory. Shell use is limited to a read-only `find` to locate an existing tracker folder. |
+| Notion connector (optional) | notion-connector, target-company-finder | Only if you choose Notion. Uses the Notion connector you have authorized in your own Claude account; the plugin does not bundle or configure it, never sees your credentials, and writes only to a page/database you confirm. Choosing local files needs no connector. |
+
+No data is sent to the plugin author or any third party. See the [Privacy Policy](PRIVACY.md).
+
 ## Privacy
 
 See the [Privacy Policy](PRIVACY.md). The plugin collects no data.
