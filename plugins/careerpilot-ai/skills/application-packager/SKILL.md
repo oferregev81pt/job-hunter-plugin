@@ -1,6 +1,6 @@
 ---
 name: application-packager
-description: Builds a complete job application package in one guided conversation: company research, fit analysis, tailored CV, cover letter, and stage prep doc. Use when someone asks to build their full application, give me everything I need to apply, do full application prep, or wants one session to get completely ready for a specific job.
+description: Builds a complete job application package in one guided conversation (company research, fit analysis, tailored CV, cover letter, and stage prep doc). Use when someone asks to build their full application, give me everything I need to apply, do full application prep, or wants one session to get completely ready for a specific job.
 ---
 
 # Application Packager
