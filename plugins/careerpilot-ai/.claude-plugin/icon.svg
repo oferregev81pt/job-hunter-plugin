@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#1a1a2e"/>
+  <!-- Card -->
+  <rect x="48" y="48" width="416" height="416" rx="64" fill="#16213e"/>
+  <!-- Briefcase body -->
+  <rect x="140" y="200" width="232" height="170" rx="18" fill="#0f3460"/>
+  <!-- Briefcase border -->
+  <rect x="140" y="200" width="232" height="170" rx="18" fill="none" stroke="#e94560" stroke-width="6"/>
+  <!-- Handle -->
+  <path d="M196 200 L196 156 Q196 148 204 148 L308 148 Q316 148 316 156 L316 200" fill="none" stroke="#e94560" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Divider line -->
+  <line x1="148" y1="285" x2="364" y2="285" stroke="#e94560" stroke-width="6"/>
+  <!-- Center clasp dot -->
+  <circle cx="256" cy="285" r="12" fill="#e94560"/>
+</svg>
